@@ -1,0 +1,16 @@
+<%= @rooms.each do |room| %>
+  <div class="col-md-4">
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <%= room.title %>
+        <h3 class="panel-title"></h3>
+      </div>
+      <div class="panel-body">
+        <%= room.description %>
+      </div>
+      <div class="panel-footer">
+        <%= link_to "Enter", room, class: "btn btn-primary" %>
+      </div>
+    </div>
+  </div>
+<% end %>
