@@ -9,11 +9,13 @@
  * Bootstrap v3.3.6 (http://getbootstrap.com)
  * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- *//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html {
+ *//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+ html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
 }
+
 
 body {
     margin: 0
@@ -1350,7 +1352,7 @@ html {
 }
 
 body {
-    font-family: "Lato","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: "Lato",游ゴシック体, 'Yu Gothic', YuGothic, 'ヒラギノ角ゴシック Pro', 'Hiragino Kaku Gothic Pro', メイリオ, Meiryo, Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
     font-size: 15px;
     line-height: 1.42857143;
     color: #ebebeb;
@@ -7441,4 +7443,4 @@ a.list-group-item-danger.active:hover,a.list-group-item-danger.active:focus {
 
 .popover-title {
     border: none
-} 
+}
