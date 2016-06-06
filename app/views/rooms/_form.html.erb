@@ -1,4 +1,6 @@
 <%= simple_form_for @room do |f| %>
+  <%= image_tag @room.image.url(:medium) %>
+  <%= f.input :image, as: :file %>
   <%= f.input :title, class: "form-control" %>
   <%= f.input :description, class: "form-control" %>
   <br>
