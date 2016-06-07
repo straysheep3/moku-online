@@ -3,11 +3,12 @@ class RoomsController < ApplicationController
 
   def index
     @rooms = Room.all.order("created_at DESC")
-
   end
 
   def show
-    #code
+    @chat = Chat.new
+    @chats = @room.chats.all.order("created_at DESC")
+
   end
 
   def new
@@ -24,7 +25,7 @@ class RoomsController < ApplicationController
   end
 
   def edit
-    #code
+    @chat = Chat.find(params[:id])
   end
 
   def update

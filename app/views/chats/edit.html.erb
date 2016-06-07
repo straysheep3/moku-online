@@ -1,0 +1,6 @@
+<%= simple_form_for [@room, @chat] do |f| %>
+  <%= f.input :comment, class: "form-control" %>
+  <p class="text-right">
+    <%= f.button :submit, class: "btn btn-primary" %>
+  </p>
+<% end %>
