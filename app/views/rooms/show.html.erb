@@ -66,16 +66,16 @@
     <div class="col-md-8">
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">ToDo List</h3>
+          <h3 class="panel-title">Task List</h3>
         </div>
         <div class="panel-body">
-          <ul>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
-            <li>text</li>
+          <ul class="list-group">
+            <%= @tasks.each do |task| %>
+              <li class="list-group-item">
+                <%= task.content %>
+              </li>
+              <hr>
+              <% end %>
           </ul>
         </div>
         <div class="panel-footer">
@@ -97,13 +97,11 @@
             <%= image_tag current_user.avatar.url(:thumb) %>
           </p>
         </div>
-        <div class="panel-footer text-center">
-          <div class="btn-group btn-group-xs">
+          <div class="btn-group-justified">
             <%= link_to "Top", root_path, class: "btn btn-default" %>
-            <%= link_to "Edit", edit_room_path(@room), class: "btn btn-warning" %>
-            <%= link_to "Destroy", room_path(@room), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger" %>
+            <%= link_to "編集", edit_room_path(@room), class: "btn btn-warning" %>
+            <%= link_to "削除", room_path(@room), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger" %>
           </div>
-        </div>
       </div>
     </div>
 
@@ -112,7 +110,7 @@
     <div class="col-md-12">
       <ul class="nav nav-pills nav-justified">
         <li class="active"><a href="#chat" data-toggle="tab">チャット</a></li>
-        <li><a href="#todo" data-toggle="tab">Todo</a></li>
+        <li><a href="#task" data-toggle="tab">Task</a></li>
       </ul>
       <div class="tab-content">
         <div class="panel tab-pane active" id="chat">
@@ -120,15 +118,15 @@
             <%= render "chats/form" %>
           </div>
           <div class="panel-footer">
-
+            チャット用フォーム
           </div>
         </div>
-        <div class="panel tab-pane" id="todo">
+        <div class="panel tab-pane" id="task">
           <div class="panel-body">
-            テスト
+            <%= render "tasks/form" %>
           </div>
           <div class="panel-footer">
-
+            タスク用フォーム
           </div>
         </div>
       </div>

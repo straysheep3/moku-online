@@ -8,6 +8,7 @@ class RoomsController < ApplicationController
   def show
     @chat = Chat.new
     @chats = @room.chats.all.order("created_at DESC")
+    @tasks = @room.tasks.all.order("created_at DESC")
 
   end
 

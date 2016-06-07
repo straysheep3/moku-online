@@ -3,5 +3,6 @@ Rails.application.routes.draw do
   root "rooms#index"
   resources :rooms do
     resources :chats
+    resources :tasks
   end
 end
