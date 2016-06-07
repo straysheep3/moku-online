@@ -1,0 +1,34 @@
+
+      <% if task.completed? %>
+        <tr>
+          <td>
+            <%= link_to complete_room_task_path(@room, task.id), method: :patch do %>
+              <i class="fa fa-check-square" aria-hidden="true"></i>
+            <% end %>
+          </td>
+          <td>
+            <strike><%= task.content %></strike>
+          </td>
+          <td>
+            <%= link_to room_task_path(@room, task.id), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% else %>
+        <tr>
+          <td>
+            <%= link_to complete_room_task_path(@room, task.id), method: :patch do %>
+              <i class="fa fa-square-o" aria-hidden="true"></i>
+            <% end %>
+          </td>
+          <td>
+            <%= task.content %>
+          </td>
+          <td>
+            <%= link_to room_task_path(@room, task.id), method: :delete, data: { confirm: "本当に削除しますか？" } do %>
+              <i class="fa fa-trash" aria-hidden="true"></i>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
