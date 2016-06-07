@@ -15,3 +15,17 @@
 //= require bootstrap-sprockets
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  var $affix = $('*[data-spy="affix"]');
+  $affix.width($affix.parent().width());
+});
+
+$('#myAffix').affix({
+  offset: {
+    top: 100,
+    bottom: function () {
+      return (this.bottom = $('#footer').outerHeight(true))
+    }
+  }
+});
