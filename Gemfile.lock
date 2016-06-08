@@ -97,6 +97,8 @@ GEM
       nokogiri (>= 1.5.9)
     mail (2.6.4)
       mime-types (>= 1.16, < 4)
+    masonry-rails (0.2.4)
+      railties
     meta_request (0.4.0)
       callsite (~> 0.0, >= 0.0.11)
       rack-contrib (~> 1.1)
@@ -224,6 +226,7 @@ DEPENDENCIES
   hirb-unicode
   jbuilder (~> 2.0)
   jquery-rails
+  masonry-rails (~> 0.2.4)
   meta_request
   paperclip (~> 4.3, >= 4.3.6)
   pry-byebug

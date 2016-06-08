@@ -14,6 +14,7 @@ gem 'simple_form', '~> 3.2', '>= 3.2.1'
 gem 'devise', '~> 4.1', '>= 4.1.1'
 gem 'paperclip', '~> 4.3', '>= 4.3.6'
 gem 'font-awesome-rails', '~> 4.6', '>= 4.6.3.0'
+gem 'masonry-rails', '~> 0.2.4'
 
 group :development, :test do
   gem 'byebug'

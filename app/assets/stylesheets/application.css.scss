@@ -13,6 +13,7 @@
  *= require font-awesome
  *= require_tree .
  *= require_self
+ *= require 'masonry/transitions'
  */
 
  @import "bootstrap-sprockets";
@@ -21,4 +22,13 @@
 
 .affix-bottom {
     position: relative
+}
+
+#rooms {
+  margin: 0 auto;
+  width: 100%;
+  .box {
+    width: 350px;
+    margin: 10px 15px;
+  }
 }

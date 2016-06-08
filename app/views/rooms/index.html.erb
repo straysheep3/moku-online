@@ -1,6 +1,6 @@
-<% @rooms.each do |room| %>
-  <div class="col-md-4">
-    <div class="panel panel-primary">
+<div id="rooms" class="transitions-enabled">
+  <% @rooms.each do |room| %>
+    <div class="panel panel-primary box">
       <div class="panel-heading">
         <h3 class="panel-title">
           <%= room.title %>
@@ -19,5 +19,5 @@
         <%= link_to "Enter", room, class: "btn btn-success" %>
       </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
