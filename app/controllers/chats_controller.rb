@@ -3,13 +3,14 @@ class ChatsController < ApplicationController
 
   def new
     @room = Room.find(params[:room_id])
-
     @chat = @room.chats.create
+    @user = current_user
   end
+
 
   def create
     @room = Room.find(params[:room_id])
-
+    @user = current_user
     @chat = @room.chats.create(chat_params)
     if @chat.save
       redirect_to @room
@@ -40,7 +41,7 @@ class ChatsController < ApplicationController
 
   private
     def chat_params
-      params.require(:chat).permit(:comment)
+      params.require(:chat).permit(:comment, :user_id)
     end
 
     def find_chat

@@ -9,7 +9,8 @@ class RoomsController < ApplicationController
     @chat = Chat.new
     @chats = @room.chats.all.order("created_at DESC")
     @tasks = @room.tasks.all.order("created_at DESC")
-
+    @users = User.all
+    @user = current_user
   end
 
   def new
