@@ -6,11 +6,11 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @chat = Chat.new
+    @chat = Chat.find(37)
     @chats = @room.chats.all.order("created_at DESC")
     @tasks = @room.tasks.all.order("created_at DESC")
     @users = User.all
-    @user = current_user
+    @user = @users.find(@chat.user_id)
   end
 
   def new

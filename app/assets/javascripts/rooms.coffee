@@ -13,6 +13,9 @@ init = ->
     bottom: ->
       @bottom = $('#footer').outerHeight(true)
 
+  $('#toggle-panel').css 'display', 'none'
+
+
   $affix = $('*[data-spy="affix"]')
   $affix.width $affix.parent().width()
   return

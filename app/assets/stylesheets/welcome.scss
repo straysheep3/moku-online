@@ -1,3 +1,33 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.welcome-nav {
+  margin-bottom: 0;
+}
+
+.main-title {
+  margin-top: 50px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.welcome-mv {
+  height: 100vh;
+  // background: linear-gradient(-45deg, rgba(246, 255, 0, .2), rgba(255, 0, 161, .2)),
+  // url(main-img.jpg);
+  background-image: url(main-img.jpg);
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+.main-info {
+  margin-top: 100px;
+  .mv-panel {
+    opacity: .8;
+  }
+}
+
+.room, .chat {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}

@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default welcome-nav">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -51,8 +51,14 @@
             </ul>
           </li>
         <% else %>
-          <li><%= link_to "Log In", new_user_session_path, class: "btn btn-info" %></li>
-          <li><%= link_to "会員登録", new_user_registration_path, class: "btn btn-success" %></li>
+          <li><%= link_to new_user_session_path, class: "btn btn-info" do %>
+            <i class="fa fa-futbol-o" aria-hidden="true"></i> ログイン
+            <% end %>
+          </li>
+          <li><%= link_to new_user_registration_path, class: "btn btn-success" do %>
+            <i class="fa fa-user-plus" aria-hidden="true"></i> 新規登録
+            <% end %>
+          </li>
         <% end %>
 
       </ul>

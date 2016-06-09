@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
-  root "rooms#index"
+  authenticated :user do
+    root "rooms#index", as: "authenticated_root"
+  end
+
+  root "welcome#index"
+
   resources :rooms do
     resources :chats
     resources :tasks do

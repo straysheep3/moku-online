@@ -10,7 +10,6 @@ class ChatsController < ApplicationController
 
   def create
     @room = Room.find(params[:room_id])
-    @user = current_user
     @chat = @room.chats.create(chat_params)
     if @chat.save
       redirect_to @room
@@ -45,6 +44,6 @@ class ChatsController < ApplicationController
     end
 
     def find_chat
-      @chat = Chat.find(params[:id])
+      @chat = current_user.chats.find(params[:id])
     end
 end

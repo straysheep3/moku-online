@@ -1,2 +1,131 @@
-<h1>Welcome#index</h1>
-<p>サンプル　さんぷる　例</p>
+<div class="container-fluid welcome-mv">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 text-center main-title">
+      <h1>Botch² Online</h1>
+      <p>
+        Botch(ぼっち)オンラインは、ずーっと１人で学習していてもしんどいし、効率が悪い。
+        学習仲間を見つけて、学習が三日坊主で終わらないよう学習仲間を見つけるお手伝いをします。
+      </p>
+    </div>
+    <div class="col-md-4 col-md-offset-6 main-info">
+      <div class="panel panel-primary mv-panel text-center">
+        <div class="panel-heading">
+          <h3 class="panel-title">ユーザー登録</h3>
+        </div>
+        <div class="panel-body">
+          現在はβ版となっています。適当なメールアドレスでも登録可能です。
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ergo, inquit, tibi Q. Haec et tu ita posuisti, et verba vestra sunt. Certe non potest. Videsne quam sit magna dissensio? Duo Reges: constructio interrete.
+        </div>
+        <div class="panel-footer">
+          <%= link_to new_user_registration_path, class: "btn btn-group-justified btn-success" do %>
+            <i class="fa fa-user-plus" aria-hidden="true"></i> 新規登録
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> ログインしてボードを作成します</h2>
+    <hr>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">ここにログイン時のindex</h3>
+        </div>
+        <div class="panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Utilitatis causa amicitia est quaesita. Summum a vobis bonum voluptas dicitur. Isto modo ne improbos quidem, si essent boni viri. Fatebuntur Stoici haec omnia dicta esse praeclare, neque eam causam Zenoni desciscendi fuisse. Erit enim instructus ad mortem contemnendam, ad exilium, ad ipsum etiam dolorem. Non est igitur summum malum dolor.
+        </div>
+        <div class="panel-footer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quae diligentissime contra Aristonem dicuntur a Chryippo. Ad eas enim res ab Epicuro praecepta dantur. Et ille ridens: Video, inquit, quid agas; Iam in altera philosophiae parte. Aliter enim explicari, quod quaeritur, non potest. Duo Reges: constructio interrete. Quae cum essent dicta, finem fecimus et ambulandi et disputandi. Teneo, inquit, finem illi videri nihil dolere.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">タイトル</h3>
+        </div>
+        <div class="panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tum Torquatus: Prorsus, inquit, assentior; Frater et T. Is ita vivebat, ut nulla tam exquisita posset inveniri voluptas, qua non abundaret.
+        </div>
+        <div class="panel-footer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Illum mallem levares, quo optimum atque humanissimum virum, Cn. Quorum altera prosunt, nocent altera. Duo Reges: constructio interrete. Dic in quovis conventu te omnia facere, ne doleas. Numquam facies. Quamquam haec quidem praeposita recte et reiecta dicere licebit. Primum quid tu dicis breve? Hinc ceteri particulas arripere conati suam quisque videro voluit afferre sententiam. Atqui reperies, inquit, in hoc quidem pertinacem; Conferam avum tuum Drusum cum C.
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title">タイトル</h3>
+        </div>
+        <div class="panel-body">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aeque enim contingit omnibus fidibus, ut incontentae sint. Cur id non ita fit? Duo Reges: constructio interrete. Recte dicis; An est aliquid, quod te sua sponte delectet? Ergo adhuc, quantum equidem intellego, causa non videtur fuisse mutandi nominis. Longum est enim ad omnia respondere, quae a te dicta sunt. Qui-vere falsone, quaerere mittimus-dicitur oculis se privasse;
+        </div>
+        <div class="panel-footer">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. O magnam vim ingenii causamque iustam, cur nova existeret disciplina! Perge porro. Tum Piso: Quoniam igitur aliquid omnes, quid Lucius noster? Duo Reges: constructio interrete. Quia dolori non voluptas contraria est, sed doloris privatio. Hoc enim constituto in philosophia constituta sunt omnia. Huic mori optimum esse propter desperationem sapientiae, illi propter spem vivere.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container room">
+  <div class="row">
+    <div class="col-md-8">
+      <%= image_tag("room.png", class: "img-responsive") %>
+    </div>
+    <div class="col-md-4">
+      <h3><i class="fa fa-flask" aria-hidden="true"></i> Roomの機能</h3>
+      <hr>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul>
+            <li>Room作成</li>
+            <li>参加機能</li>
+            <li>メンバー管理</li>
+            <li>チャット機能</li>
+            <li>タスク機能</li>
+          </ul>
+        </div>
+        <div class="panel-footer">
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr>
+
+<div class="container chat">
+  <div class="row">
+    <div class="col-md-4">
+      <h3><i class="fa fa-comments-o" aria-hidden="true"></i> チャット、タスク機能</h3>
+      <hr>
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <ul>
+            <li>チャット機能
+              <ul>
+                <li>チャット機能は、追従</li>
+              </ul>
+            </li>
+            <li>チャット、タスクはタブで切り替え</li>
+            <li>こんなもんや</li>
+          </ul>
+        </div>
+        <div class="panel-footer">
+
+        </div>
+      </div>
+    </div>
+    <div class="col-md-8">
+      <%= image_tag "chat.png", class: "img-responsive" %>
+    </div>
+  </div>
+</div>
