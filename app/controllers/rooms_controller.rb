@@ -6,11 +6,8 @@ class RoomsController < ApplicationController
   end
 
   def show
-    @chat = Chat.find(37)
     @chats = @room.chats.all.order("created_at DESC")
     @tasks = @room.tasks.all.order("created_at DESC")
-    @users = User.all
-    @user = @users.find(@chat.user_id)
   end
 
   def new
@@ -42,11 +39,17 @@ class RoomsController < ApplicationController
     redirect_to root_path
   end
 
-  def room_params
-    params.require(:room).permit(:title, :description, :image)
-  end
+  private
 
-  def find_room
-    @room = Room.find(params[:id])
-  end
+    def room_params
+      params.require(:room).permit(:title, :description, :image)
+    end
+
+    def find_room
+      @room = Room.find(params[:id])
+    end
+
+    def find_chat
+      @chat = Chat.find(params[:room_id])
+    end
 end

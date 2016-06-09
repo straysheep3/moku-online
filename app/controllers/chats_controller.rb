@@ -1,16 +1,19 @@
 class ChatsController < ApplicationController
-  before_action :find_chat, only: [:show, :edit, :update, :destroy]
+  before_action :set_room
+  before_action :set_chat, except: [:create]
 
   def new
-    @room = Room.find(params[:room_id])
+    c_params = chat_params
+    c_params[:user_id] = current_user.id
     @chat = @room.chats.create
-    @user = current_user
   end
 
 
   def create
-    @room = Room.find(params[:room_id])
-    @chat = @room.chats.create(chat_params)
+    c_params = chat_params
+    c_params[:user_id] = current_user.id
+    @chat = @room.chats.create(c_params)
+
     if @chat.save
       redirect_to @room
     else
@@ -18,32 +21,33 @@ class ChatsController < ApplicationController
     end
   end
 
-  def edit
-    @room = Room.find(params[:room_id])
-  end
-
   def update
-    @room = Room.find(params[:room_id])
     if @chat.update(chat_params)
       redirect_to @room
     else
       render "edit"
     end
-
   end
 
   def destroy
     @chat.destroy
-    @room = Room.find(params[:room_id])
     redirect_to room_path(@room)
   end
 
   private
     def chat_params
-      params.require(:chat).permit(:comment, :user_id)
+      params[:chat].permit(:comment, :user_id)
     end
 
-    def find_chat
-      @chat = current_user.chats.find(params[:id])
+    def set_room
+      @room = Room.find(params[:room_id])
+    end
+
+    def set_chat
+      @chat = @room.chats.find(params[:id])
+    end
+
+    def room_params
+      @room = Room.find(params[:room_id])
     end
 end

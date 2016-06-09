@@ -30,11 +30,12 @@
         </div>
         <div class="panel-body">
           <% @chats.each do |chat| %>
-          <div class="panel panel-default">
+          <div class="panel panel-default chat-area">
             <div class="panel-heading">
               <div class="media">
                 <div class="pull-left">
-                  <%= image_tag(@user.avatar.url(:thumb)) %>
+                  <%= image_tag chat.user.avatar.url(:thumb) %>
+                  <%= chat.user.username %>
                 </div>
                 <div class="media-body">
                   <p>
@@ -42,17 +43,19 @@
                   </p>
                 </div>
               </div>
-              <hr>
-              <div class="text-right">
-                <div class="btn-group btn-group-sm">
-                  <%= link_to edit_room_chat_path(@room, chat), class: "btn btn-warning" do %>
-                    <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                  <% end %>
-                  <%= link_to room_chat_path(@room, chat), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger" do %>
-                    <i class="fa fa-trash-o" aria-hidden="true"></i>
-                  <% end %>
+              <% if chat.user == current_user %>
+                <hr>
+                <div class="text-right">
+                  <div class="btn-group btn-group-sm">
+                    <%= link_to edit_room_chat_path(@room, chat), class: "btn btn-warning" do %>
+                      <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+                    <% end %>
+                    <%= link_to room_chat_path(@room, chat), method: :delete, data: { confirm: "本当に削除しますか？" }, class: "btn btn-danger" do %>
+                      <i class="fa fa-trash-o" aria-hidden="true"></i>
+                    <% end %>
+                  </div>
                 </div>
-              </div>
+              <% end %>
             </div>
           </div>
           <br>
@@ -98,9 +101,6 @@
           <p class="text-right">
             <%= @room.created_at %>
             <br>
-            <% @users.each do |user| %>
-              <%= image_tag(user.avatar.url(:thumb)) %>
-            <% end %>
           </p>
         </div>
           <div class="btn-group-justified">
