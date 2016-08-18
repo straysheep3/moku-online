@@ -120,6 +120,7 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (= 0.3.0)
+    pg (0.17.1)
     pry (0.10.3)
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
@@ -159,6 +160,11 @@ GEM
       ruby-graphviz (~> 1.2)
     rails-html-sanitizer (1.0.3)
       loofah (~> 2.0)
+    rails_12factor (0.0.2)
+      rails_serve_static_assets
+      rails_stdout_logging
+    rails_serve_static_assets (0.0.5)
+    rails_stdout_logging (0.0.5)
     railties (4.2.6)
       actionpack (= 4.2.6)
       activesupport (= 4.2.6)
@@ -229,10 +235,12 @@ DEPENDENCIES
   masonry-rails (~> 0.2.4)
   meta_request
   paperclip (~> 4.3, >= 4.3.6)
+  pg (= 0.17.1)
   pry-byebug
   pry-rails
   rails (= 4.2.6)
   rails-erd (~> 1.4, >= 1.4.7)
+  rails_12factor (= 0.0.2)
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   simple_form (~> 3.2, >= 3.2.1)
@@ -243,4 +251,4 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 BUNDLED WITH
-   1.12.3
+   1.12.5
